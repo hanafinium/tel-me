@@ -1,13 +1,165 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+:root {
+  --background-main: #edbb99;
+  --background-container: #fff6ea;
+  --red: #d12e23;
+  --gray-dark: #5a5858;
+  --gray-light: #969494;
+  --red-light: #fb6464;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--background-main);
+  color: var(--background-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#data {
+  margin-left: 1.5rem;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  height: 94vh;
+  width: 65vw;
+}
+
+#person {
+  position: relative;
+  background-color: var(--background-container);
+  font-size: 1rem;
+  width: 30vw;
+  min-width: 370px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+
+#name {
+  color: var(--gray-dark);
+  margin: 0;
+}
+
+#birthday {
+  color: var(--gray-light);
+  margin: 0;
+}
+
+#data {
+  display: flex;
+  flex-direction: column;
+}
+
+#input-container {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+#input-container > a {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+form {
+  display: none;
+}
+
+#form-elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.form-disp {
+  display: block;
+  position: absolute;
+  right: 3.5rem;
+  top: 1rem;
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  height: 22vh;
+  width: 25vw;
+  background-color: var(--background-container);
+}
+
+#form-elem > button {
+  height: 30px;
+  width: 55px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem auto;
+  cursor: pointer;
+  border: none;
+  background-color: var(--red-light);
+  color: var(--background-container);
+}
+
+input {
+  width: 18vw;
+  height: 25px;
+  margin: 0.3rem auto;
+  border: solid var(--gray-light) 1.2px;
+  border-radius: 5px;
+}
+
+img {
+  border-radius: 50%;
+  margin: 0.3rem 0.3rem;
+}
+
+#icons {
+  position: absolute;
+  right: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#icons > a {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 400px) {
+  #person {
+    width: 75vw;
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #data {
+    margin-left: 0.5rem;
+  }
+
+  #icons {
+    margin-left: 0.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  #display {
+    width: 75vw;
+  }
 }
